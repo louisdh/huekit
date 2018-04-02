@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class ColorBarPicker: UIControl {
+open class ColorBarPicker: UIControl {
 	
 	private var isVertical: Bool = false {
 		didSet {
@@ -33,7 +33,7 @@ public class ColorBarPicker: UIControl {
 	private static let indicatorSizeActive = CGSize(width: 40.0, height: 40.0)
 	
 	@IBInspectable
-	public var hue: CGFloat {
+	open var hue: CGFloat {
 		get {
 			if isVertical {
 				return 1.0 - value
@@ -112,7 +112,7 @@ public class ColorBarPicker: UIControl {
 	
 	// MARK: - Drawing
 	
-	override public func layoutSubviews() {
+	override open func layoutSubviews() {
 		
 		if colorBarView.superview == nil {
 			
@@ -182,26 +182,26 @@ public class ColorBarPicker: UIControl {
 		self.value = percent.pinned(between: 0, and: 1)
 	}
 	
-	override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+	override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
 		self.trackIndicator(with: touch)
 	
 		growIndicator()
 		return true
 	}
 	
-	override public func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+	override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
 		self.trackIndicator(with: touch)
 	
 		return true
 	}
 	
-	override public func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+	override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
 		super.endTracking(touch, with: event)
 		
 		shrinkIndicator()
 	}
 	
-	override public func cancelTracking(with event: UIEvent?) {
+	override open func cancelTracking(with event: UIEvent?) {
 		super.cancelTracking(with: event)
 		
 		shrinkIndicator()
@@ -250,7 +250,7 @@ public class ColorBarPicker: UIControl {
 	
 	private let accessibilityInterval: CGFloat = 0.05
 	
-	public override var accessibilityTraits: UIAccessibilityTraits {
+	open override var accessibilityTraits: UIAccessibilityTraits {
 		get {
 			var t = super.accessibilityTraits
 			
@@ -263,7 +263,7 @@ public class ColorBarPicker: UIControl {
 		}
 	}
 	
-	public override func accessibilityIncrement() {
+	open override func accessibilityIncrement() {
 		
 		var newValue = self.value + accessibilityInterval
 		
@@ -274,7 +274,7 @@ public class ColorBarPicker: UIControl {
 		self.value = newValue
 	}
 	
-	public override func accessibilityDecrement() {
+	open override func accessibilityDecrement() {
 	
 		var newValue = self.value - accessibilityInterval
 		
@@ -285,7 +285,7 @@ public class ColorBarPicker: UIControl {
 		self.value = newValue
 	}
 	
-	public override var accessibilityValue: String? {
+	open override var accessibilityValue: String? {
 		get {
 			return String(format: "%d degrees hue", (self.value * 360.0))
 		}

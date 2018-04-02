@@ -9,12 +9,12 @@
 import UIKit
 
 @IBDesignable
-class ColorSquareView: UIImageView {
+open class ColorSquareView: UIImageView {
 
 	private var drawnHue: CGFloat = 0.0
 	
 	@IBInspectable
-	var hue: CGFloat = 0.0 {
+	open var hue: CGFloat = 0.0 {
 		didSet {
 
 			if self.image != nil && abs(drawnHue - hue) <= 1e-10 {

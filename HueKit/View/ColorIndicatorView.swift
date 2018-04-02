@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class ColorIndicatorView: UIView {
+open class ColorIndicatorView: UIView {
 	
 	@IBInspectable
-	public var color: UIColor = .black {
+	open var color: UIColor = .black {
 		didSet {
 			
 			if oldValue != color {
@@ -35,7 +35,7 @@ public class ColorIndicatorView: UIView {
 
 	}
 		
-	override public func draw(_ rect: CGRect) {
+	override open func draw(_ rect: CGRect) {
 		
 		guard let context = UIGraphicsGetCurrentContext() else {
 			return

@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class SourceColorView: UIControl {
+open class SourceColorView: UIControl {
 
 	@IBInspectable
-	public var isTrackingInside: Bool = false {
+	open var isTrackingInside: Bool = false {
 		didSet {
 			if oldValue != isTrackingInside {
 				self.setNeedsDisplay()
@@ -22,7 +22,7 @@ public class SourceColorView: UIControl {
 	}
 	
 	@IBInspectable
-	public var dontShrinkWhenPressed: Bool = false {
+	open var dontShrinkWhenPressed: Bool = false {
 		didSet {
 			if oldValue != dontShrinkWhenPressed {
 				self.setNeedsDisplay()
@@ -30,7 +30,7 @@ public class SourceColorView: UIControl {
 		}
 	}
 	
-	public override func draw(_ rect: CGRect) {
+	open override func draw(_ rect: CGRect) {
 		super.draw(rect)
 	
 		guard isEnabled && isTrackingInside && !dontShrinkWhenPressed else {
@@ -52,7 +52,7 @@ public class SourceColorView: UIControl {
 	
 	// MARK: - UIControl overrides
 	
-	public override func beginTracking(_ touch: UITouch,  with event: UIEvent?) -> Bool {
+	open override func beginTracking(_ touch: UITouch,  with event: UIEvent?) -> Bool {
 
 		guard self.isEnabled else {
 			return false
@@ -63,7 +63,7 @@ public class SourceColorView: UIControl {
 		return super.beginTracking(touch, with: event)
 	}
 	
-	public override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+	open override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
 		
 		let isTrackingInside = self.bounds.contains(touch.location(in: self))
 	
@@ -72,14 +72,14 @@ public class SourceColorView: UIControl {
 		return super.continueTracking(touch, with: event)
 	}
 	
-	public override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+	open override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
 	
 		self.isTrackingInside = false
 	
 		super.endTracking(touch, with: event)
 	}
 	
-	public override func cancelTracking(with event: UIEvent?) {
+	open override func cancelTracking(with event: UIEvent?) {
 	
 		self.isTrackingInside = false
 	

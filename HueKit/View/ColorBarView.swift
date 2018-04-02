@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class ColorBarView: UIView {
+open class ColorBarView: UIView {
 
 	private static func createContentImage() -> CGImage? {
 	
@@ -19,7 +19,7 @@ class ColorBarView: UIView {
 		return HSBGen.createHSVBarContentImage(hsbComponent: .hue, hsv: hsv)
 	}
 
-	override func draw(_ rect: CGRect) {
+	override open func draw(_ rect: CGRect) {
 		
 		guard let context = UIGraphicsGetCurrentContext() else {
 			return

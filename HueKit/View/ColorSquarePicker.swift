@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class ColorSquarePicker: UIControl {
+open class ColorSquarePicker: UIControl {
 
 	private let contentInsetX: CGFloat = 20
 	private let contentInsetY: CGFloat = 20
@@ -60,7 +60,7 @@ public class ColorSquarePicker: UIControl {
 		indicator.color = color
 	}
 	
-	public override func layoutSubviews() {
+	open override func layoutSubviews() {
 	
 		if colorSquareView.superview == nil {
 			
@@ -104,7 +104,7 @@ public class ColorSquarePicker: UIControl {
 		self.value = touchValue
 	}
 	
-	override public func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+	override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
 	
 		self.trackIndicator(with: touch)
 		
@@ -113,20 +113,20 @@ public class ColorSquarePicker: UIControl {
 		return true
 	}
 	
-	override public func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+	override open func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
 		
 		self.trackIndicator(with: touch)
 		
 		return true
 	}
 
-	override public func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+	override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
 		super.endTracking(touch, with: event)
 		
 		shrinkIndicator()
 	}
 	
-	override public func cancelTracking(with event: UIEvent?) {
+	override open func cancelTracking(with event: UIEvent?) {
 		super.cancelTracking(with: event)
 		
 		shrinkIndicator()
