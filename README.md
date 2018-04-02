@@ -23,7 +23,7 @@
 HueKit is a UI framework for iOS that provides components and utilities for building color pickers. Since each app may want a custom color picker, the design of this framework is geared towards reusability and allows for great customization.
 
 ### Components
-All components are marked `open`, so they can be inherited from. Also, all components are marked `@IBDesignable`, so they can be previewed in Interface Builder. Components that provide user interaction are subclassed from `UIControl`, you can observe a change in value by using `@IBAction`.
+All components are marked `open`, so they can be subclassed. Also, all components are marked `@IBDesignable`, so they can be previewed in Interface Builder. Components that provide user interaction are subclassed from `UIControl`, you can observe a change in value by using `@IBAction`.
 
 #### ColorBarPicker
 ![](readme-resources/components/ColorBarPicker.png)
