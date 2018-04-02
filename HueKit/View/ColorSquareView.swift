@@ -16,8 +16,8 @@ class ColorSquareView: UIImageView {
 	@IBInspectable
 	var hue: CGFloat = 0.0 {
 		didSet {
-			
-			if abs(drawnHue - hue) <= 1e-10 {
+
+			if self.image != nil && abs(drawnHue - hue) <= 1e-10 {
 				return
 			}
 			
