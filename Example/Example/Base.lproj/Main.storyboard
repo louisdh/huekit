@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Fw-bv-Lqp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HueKit Example-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tr0-NJ-glz">
+                                <rect key="frame" x="27.5" y="72" width="320" height="518.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdi-0K-woj" customClass="ColorSquarePicker" customModule="HueKit">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zdi-0K-woj" secondAttribute="height" multiplier="1:1" id="KwV-0T-f2e"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="value">
+                                                <point key="value" x="0.0" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="colorSquarePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DaQ-xT-J8e"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht2-O7-0f1" customClass="ColorBarPicker" customModule="HueKit">
+                                        <rect key="frame" x="0.0" y="320" width="320" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="HJ2-He-zzk"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="colorBarPickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hie-BA-aJU"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMo-bw-pvL">
+                                        <rect key="frame" x="0.0" y="364" width="320" height="154.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6xm-ns-jG5">
+                                                <rect key="frame" x="20" y="20" width="280" height="114.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GZz-Je-2gO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="73.5"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Yye-8l-cBt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="32.5"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BS-9j-1x8">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="32.5"/>
+                                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euH-5z-YuL">
+                                                                        <rect key="frame" x="93.5" y="0.0" width="93" height="32.5"/>
+                                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqz-K4-h3x">
+                                                                        <rect key="frame" x="186.5" y="0.0" width="93.5" height="32.5"/>
+                                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbY-pB-SO7">
+                                                                <rect key="frame" x="0.0" y="36.5" width="280" height="1"/>
+                                                                <color key="backgroundColor" white="0.85195312499999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="KMO-Jy-7nJ"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Lpu-I1-JEV">
+                                                                <rect key="frame" x="0.0" y="41.5" width="280" height="32"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="539-Mk-3VV">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="32"/>
+                                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="S:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16l-vt-EZG">
+                                                                        <rect key="frame" x="93.5" y="0.0" width="93" height="32"/>
+                                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRv-69-Kyf">
+                                                                        <rect key="frame" x="186.5" y="0.0" width="93.5" height="32"/>
+                                                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Lpu-I1-JEV" firstAttribute="height" secondItem="Yye-8l-cBt" secondAttribute="height" id="uhk-1i-KRK"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJG-Df-vgl">
+                                                        <rect key="frame" x="0.0" y="77.5" width="280" height="1"/>
+                                                        <color key="backgroundColor" white="0.85195312499999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="liA-ZC-ZMS"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FQM-eG-Kx1">
+                                                        <rect key="frame" x="0.0" y="82.5" width="280" height="32"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9X-aB-MKf" customClass="ColorIndicatorView" customModule="HueKit">
+                                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="F9X-aB-MKf" secondAttribute="height" multiplier="1:1" id="5ff-Qa-LF2"/>
+                                                                    <constraint firstAttribute="width" constant="32" id="7PF-Y2-rat"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBX-c2-og2">
+                                                                <rect key="frame" x="40" y="0.0" width="240" height="32"/>
+                                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="FQM-eG-Kx1" firstAttribute="height" secondItem="Lpu-I1-JEV" secondAttribute="height" id="7tw-z3-RhV"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="6xm-ns-jG5" secondAttribute="bottom" constant="20" id="QhR-Z9-V4H"/>
+                                            <constraint firstAttribute="trailing" secondItem="6xm-ns-jG5" secondAttribute="trailing" constant="20" id="S5r-aC-jbg"/>
+                                            <constraint firstItem="6xm-ns-jG5" firstAttribute="leading" secondItem="UMo-bw-pvL" secondAttribute="leading" constant="20" id="ZWD-CF-djw"/>
+                                            <constraint firstItem="6xm-ns-jG5" firstAttribute="top" secondItem="UMo-bw-pvL" secondAttribute="top" constant="20" id="u3d-v9-Fe9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="g1S-Ws-Nbz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tr0-NJ-glz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SEn-Gx-KKW"/>
+                            <constraint firstItem="Tr0-NJ-glz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="jer-1Y-YsK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HueKit Example" id="eA9-XS-nqp"/>
+                    <connections>
+                        <outlet property="bLabel" destination="Vqz-K4-h3x" id="Lcv-rh-t9r"/>
+                        <outlet property="colorIndicatorView" destination="F9X-aB-MKf" id="Mtx-hM-w9Z"/>
+                        <outlet property="colorSquarePicker" destination="zdi-0K-woj" id="tPX-oR-0VC"/>
+                        <outlet property="gLabel" destination="euH-5z-YuL" id="wJ5-5E-77k"/>
+                        <outlet property="hLabel" destination="539-Mk-3VV" id="e5s-5c-P4J"/>
+                        <outlet property="hexLabel" destination="aBX-c2-og2" id="Idh-jp-r44"/>
+                        <outlet property="rLabel" destination="9BS-9j-1x8" id="qZg-q3-WRl"/>
+                        <outlet property="sLabel" destination="16l-vt-EZG" id="fKa-nb-sM2"/>
+                        <outlet property="vLabel" destination="sRv-69-Kyf" id="bjq-dp-QFi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bxk-8d-r3b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Fw-bv-Lqp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Ii-tA-Bk8">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w8A-a3-8JC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtp-Ht-Dz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

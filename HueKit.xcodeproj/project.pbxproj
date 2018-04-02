@@ -150,6 +150,7 @@
 		BE5C1E0E1F3266B600B0080C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Silver Fox";
 				TargetAttributes = {
@@ -167,6 +168,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = BE5C1E0D1F3266B600B0080C;
 			productRefGroup = BE5C1E181F3266B600B0080C /* Products */;
