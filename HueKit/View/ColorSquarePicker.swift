@@ -49,11 +49,15 @@ public class ColorSquarePicker: UIControl {
 			}
 		}
 	}
+	
+	public var color: UIColor {
+		return  UIColor(hue: hue, saturation: value.x, brightness: value.y, alpha: 1.0)
+	}
 
 	private func setIndicatorColor() {
 	
 		colorSquareView.hue = hue
-		indicator.color = UIColor(hue: hue, saturation: value.x, brightness: value.y, alpha: 1.0)
+		indicator.color = color
 	}
 	
 	public override func layoutSubviews() {
