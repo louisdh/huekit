@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'HueKit'
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.license = 'MIT'
   s.summary = 'A UI framework for iOS that provides components and utilities for building color pickers.'
   s.homepage = 'https://github.com/louisdh/huekit'
