@@ -5,7 +5,7 @@
 <p align="center">
 <a href="https://travis-ci.org/louisdh/huekit"><img src="https://travis-ci.org/louisdh/huekit.svg?branch=master" style="max-height: 300px;" alt="Build Status"/></a>
 <br>
-<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat" style="max-height: 300px;" alt="Swift"/></a>
+<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat" style="max-height: 300px;" alt="Swift"/></a>
 <a href="https://cocoapods.org/pods/HueKit"><img src="https://img.shields.io/cocoapods/v/HueKit.svg" style="max-height: 300px;" alt="Pod Version"/></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4bc51d.svg?style=flat" style="max-height: 300px;" alt="Carthage Compatible"/></a>
 <img src="https://img.shields.io/badge/platform-iOS-lightgrey.svg" style="max-height: 300px;" alt="Platform: iOS">
@@ -67,7 +67,7 @@ Run ```carthage update``` to build the framework and drag the built ```HueKit.fr
 ## Requirements
 
 * iOS 10.0+
-* Xcode 9.0+
+* Xcode 9.3+
 
 ## Todo 
 

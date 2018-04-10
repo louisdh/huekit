@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics
 
-public struct RGB {
+public struct RGB: Hashable {
 	/// In range 0...1
 	public var r: CGFloat
 	

@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics
 
-public struct HSV {
+public struct HSV: Hashable {
 	/// In degrees (range 0...360)
 	public var h: CGFloat
 	
