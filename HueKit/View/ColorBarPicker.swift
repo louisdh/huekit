@@ -27,8 +27,8 @@ open class ColorBarPicker: UIControl {
 
 	}
 	
-	
-	private let contentInset: CGFloat = 20.0
+	@IBInspectable
+	public var contentInset: CGFloat = 0
 	private static let indicatorSizeInactive = CGSize(width: 24.0, height: 24.0)
 	private static let indicatorSizeActive = CGSize(width: 40.0, height: 40.0)
 	
