@@ -253,8 +253,9 @@ open class ColorBarPicker: UIControl {
 	open override var accessibilityTraits: UIAccessibilityTraits {
 		get {
 			var t = super.accessibilityTraits
-			
-			t |= UIAccessibilityTraitAdjustable
+      // change for Swift 5
+      // solution: https://stackoverflow.com/questions/52374314/binary-operator-cannot-be-applied-to-two-uiaccessibilitytraits-operands
+      t.insert(.adjustable)
 			
 			return t
 		}
